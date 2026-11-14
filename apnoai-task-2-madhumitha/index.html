@@ -64,6 +64,7 @@
 
       // STATE: Dark mode
       const [isDark, setIsDark] = useState(false);
+      const [likes, setLikes] = useState(0);
 const [message, setMessage] = useState("Welcome to my profile!");
 <button
   onClick={() => setMessage("Thanks for visiting my profile!")}
@@ -181,6 +182,13 @@ const [message, setMessage] = useState("Welcome to my profile!");
   <span>Connect on LinkedIn</span>
   <span>↗</span>
 </a>
+            <button
+  type="button"
+  onClick={() => setLikes(previous => previous + 1)}
+  className="mt-4 rounded-full bg-pink-500 px-6 py-2 font-semibold text-white hover:bg-pink-600"
+>
+  ❤️ Like {likes}
+</button>
 
             {/* Social Links */}
             <div className="flex justify-center gap-4">
